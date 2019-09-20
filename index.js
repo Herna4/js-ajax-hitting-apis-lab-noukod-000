@@ -23,6 +23,10 @@ function displayCommits(){
     document.getElementById('details').innerHTML = commitList;
 }
 
+function getBranches(){
+  
+}
+
 function displayRepositories(){
   
 }
