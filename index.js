@@ -8,7 +8,7 @@ function getRepositories(){
 
 function displayCommits(){
   let commits= JSON.parse(this.responseText);
-  console.log(commits);
+  // console.log(commits);
 
   const commitList =
   `<ul>
