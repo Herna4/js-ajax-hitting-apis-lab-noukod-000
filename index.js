@@ -7,17 +7,21 @@ function getRepositories(){
 }
 
 function displayCommits(){
-  const commits = JSON.parse(this.responseText);
-  const commitsList = `<ul>${commits.map(
-    commit => '<li><strong>' + 
-    commit.author.login + '</strong> - ' + 
-    commit.commit.message + 
-    '</li>'
-    )
-    .join('')}</ul>`;
- document.getElementById('details').innerHTML = commitsList;
-}
+  var commits= JSON.parse(this.responseText);
+  console.log(commits);
 
+  const commitList =
+  `<ul>
+    ${commits.map(commit => `
+      <li>
+        ${commit.commit.author.name}
+        ${commit.author.login}
+        ${commit.commit.message}
+      </li>
+        `).join('')}
+    </ul>`
+    document.getElementById('details').innerHTML = commitList;
+}
 
 function displayRepositories(){
   
