@@ -28,6 +28,7 @@ function displayBranches(){
   const branchList = `<ul>${branches.map(branch => `<li>${}branch.name</li>`).join('')
   }
     </ul>`
+  document.getElementById('details').innerHTML = branchlist
 }
 
 function displayRepositories(){
