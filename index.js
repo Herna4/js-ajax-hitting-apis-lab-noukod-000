@@ -36,6 +36,10 @@ function displayBranches(){
   document.getElementById('details').innerHTML = branchlist
 }
 
+function getBranches(){
+  
+}
+
 function displayRepositories(){
   
 }
