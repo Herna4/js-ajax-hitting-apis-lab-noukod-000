@@ -24,8 +24,7 @@ function displayCommits(){
 }
 
 function displayBranches(){
-  var branches= JSON.parse(this.responseText)
-  console.log(branches)
+  let branches= JSON.parse(this.responseText)
   const branchlist =
   `
   <ul>
