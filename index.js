@@ -5,3 +5,7 @@ function getRepositories(){
   req.open('GET', `https://api.github.com/users/${username}/repos`);
   req.send();
 }
+
+function displayRepositories(){
+  
+}
