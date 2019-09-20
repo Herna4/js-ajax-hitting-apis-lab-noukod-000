@@ -14,6 +14,7 @@ function getRepositories() {
   req.open("GET", url);
   req.send();
   return false;
+}
 
 function displayCommits(){
   let commits= JSON.parse(this.responseText);
