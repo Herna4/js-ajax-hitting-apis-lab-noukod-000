@@ -54,7 +54,7 @@ function getBranches(el){
   req.send();
 }
 
-unction displayRepositories() {
+function displayRepositories() {
   const repos = JSON.parse(this.responseText);
   const repoList = "<ul>" + repos.map(repo => {
   const username = 'data-username="' + repo.owner.login + '"'
