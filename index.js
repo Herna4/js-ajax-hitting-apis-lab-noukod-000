@@ -6,6 +6,10 @@ function getRepositories(){
   req.send();
 }
 
+function displayCommits(){
+  
+}
+
 function displayRepositories(){
   
 }
