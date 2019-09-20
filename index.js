@@ -23,6 +23,15 @@ function displayCommits(){
     document.getElementById('details').innerHTML = commitList;
 }
 
+function getCommits(el){
+  const username = el.dataset.username
+  const repo = el.dataset.repository
+  const req = new XMLHttpRequest()
+  req.addEventListener('load', displayCommits)
+  req.open('GET', `https://api.github.com/repos/${username}/${repo}/commits`)
+  req.send
+}
+
 function displayBranches(){
   let branches= JSON.parse(this.responseText)
   const branchlist =
