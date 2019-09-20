@@ -7,8 +7,7 @@ function getRepositories(){
 }
 
 function displayCommits(){
-  let resp = { responseText: commitsData() }
-        displayCommits.call(resp)
+  const commits = JSON.parse(this.responseText);
 }
 
 function displayRepositories(){
