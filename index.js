@@ -7,7 +7,8 @@ function getRepositories(){
 }
 
 function displayCommits(){
-  
+  let resp = { responseText: commitsData() }
+        displayCommits.call(resp)
 }
 
 function displayRepositories(){
