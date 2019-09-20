@@ -38,7 +38,7 @@ function displayBranches(){
 
 function getBranches(el){
   let username = item.dataset.username
-  let repository = el.dataset.repo;
+ const repo = item.dataset.repository
   // let url = `https://api.github.com/repos/${username}/${repository}` + `/branches`
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayBranches);
