@@ -24,10 +24,16 @@ function displayCommits(){
 }
 
 function displayBranches(){
-  let branches = JSON.parse(this.responseText);
-  const branchList = `<ul>${branches.map(branch => `<li>${}branch.name</li>`).join('')
-  }
-    </ul>`
+  var branches= JSON.parse(this.responseText)
+  // console.log(branches)
+  const branchlist =
+  `
+  <ul>
+    ${branches.map(branch => `
+      <li>
+        ${branch.name}
+      </li>`).join('')}
+  </ul>`
   document.getElementById('details').innerHTML = branchlist
 }
 
