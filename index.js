@@ -1,11 +1,3 @@
-// function getRepositories(){
-//   let input = document.getElementById('username').value;
-//   const req = new XMLHttpResquest();
-//   req.addEventListener('load', displayRepositories);
-//   req.open('GET', `https://api.github.com/users/${username}/repos`);
-//   req.send();
-// }
-
 function getRepositories() {
   const username = document.getElementById('username').value
   const url = 'https://api.github.com/users/' + username + '/repos'
