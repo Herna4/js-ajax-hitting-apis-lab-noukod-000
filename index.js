@@ -55,5 +55,19 @@ function getBranches(el){
 }
 
 function displayRepositories(){
-  
+    const repos = JSON.parse(this.responseText);
+    
+    const repoList = `<ul>${repos.map(repo =>
+        '<li>'
+        +repo.name+'<br>'
+        +'<a href="'+repo.html_url+'">'+repo.html_url+'</a>'+'<br>'+
+        '<a href="#" data-repository="'+repo.name+'" data-username="'+repo.owner.login+
+        '" onclick="getCommits(this)"> Get Commits</a><br>'+
+        '<a href="#" data-repository="'+repo.name+'" data-username="'+repo.owner.login+
+        '" onclick="getBranches(this)">Get Branches</a>'+
+        '</li>'
+    ).join('')}</ul>`
+
+    document.getElementById('repositories').innerHTML = repoList
+    // console.log('repos:',repos)
 }
