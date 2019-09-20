@@ -24,7 +24,7 @@ function displayCommits(){
 }
 
 function getBranches(){
-  
+  let branches = JSON.parse(this.responseText);
 }
 
 function displayRepositories(){
